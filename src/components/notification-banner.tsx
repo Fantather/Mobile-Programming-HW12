@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Ionicons } from "@expo/vector-icons";
 import { usePathname, useRouter } from "expo-router";
 import { Animated, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -58,7 +59,7 @@ const NotificationBanner = () => {
       <TouchableOpacity style={styles.banner} activeOpacity={0.9} onPress={handlePress}>
         <View style={styles.appRow}>
           <View style={styles.appIcon}>
-            <Text style={styles.appIconText}>✉</Text>
+            <Ionicons name="mail" size={11} color="#fff" />
           </View>
           <Text style={styles.appName}>Messenger · сейчас</Text>
         </View>
@@ -112,10 +113,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#2b7de0",
     alignItems: "center",
     justifyContent: "center",
-  },
-  appIconText: {
-    color: "#fff",
-    fontSize: 11,
   },
   appName: {
     fontSize: 12,

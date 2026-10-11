@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -37,7 +38,7 @@ const HomeScreen = () => {
           onPress={() => router.push("/chats")}
         >
           <View style={styles.appIcon}>
-            <Text style={styles.appIconText}>✉</Text>
+            <Ionicons name="mail" size={32} color="#fff" />
             {unreadTotal > 0 && (
               <View style={styles.badge}>
                 <Text style={styles.badgeText}>{unreadTotal}</Text>
@@ -86,10 +87,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#2b7de0",
     alignItems: "center",
     justifyContent: "center",
-  },
-  appIconText: {
-    color: "#fff",
-    fontSize: 30,
   },
   badge: {
     position: "absolute",

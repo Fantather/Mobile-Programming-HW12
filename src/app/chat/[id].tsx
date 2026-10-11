@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import {
   FlatList,
@@ -93,7 +94,7 @@ const ChatScreen = () => {
             returnKeyType="send"
           />
           <TouchableOpacity style={styles.sendButton} onPress={handleSend} activeOpacity={0.8}>
-            <Text style={styles.sendButtonText}>➤</Text>
+            <Ionicons name="send" size={18} color="#fff" />
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
@@ -198,10 +199,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#2b7de0",
     alignItems: "center",
     justifyContent: "center",
-  },
-  sendButtonText: {
-    color: "#fff",
-    fontSize: 18,
   },
 });
 
